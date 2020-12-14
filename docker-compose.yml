@@ -32,7 +32,7 @@ services:
     container_name: chat-mysql
     restart: always
     ports:
-      - "4200:3306"
+      - "4269:3306"
     volumes:
       - ./data:/docker-entrypoint-initdb.d
       # Here we’re telling the db container to look in that data folder for a .sql export
