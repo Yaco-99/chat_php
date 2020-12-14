@@ -15317,3 +15317,5 @@
 172.22.0.1 - - [13/Nov/2020:14:05:07 +0000] "GET /assets/php/content.php?d=todo HTTP/1.1" 200 300 "http://localhost:2021/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36"
 172.22.0.1 - - [13/Nov/2020:14:05:07 +0000] "GET /assets/php/content.php?d=archive HTTP/1.1" 200 5 "http://localhost:2021/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36"
 172.22.0.1 - - [13/Nov/2020:14:05:07 +0000] "GET /favicon.ico HTTP/1.1" 200 2418 "http://localhost:2021/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36"
+172.26.0.1 - - [14/Dec/2020:09:02:42 +0000] "GET / HTTP/1.1" 200 213 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
+172.26.0.1 - - [14/Dec/2020:09:02:44 +0000] "GET /favicon.ico HTTP/1.1" 200 213 "http://localhost:6969/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
