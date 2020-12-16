@@ -10802,6 +10802,23 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+body {
+  background: url("../images/bg.jpg") no-repeat;
+  background-size: cover;
+}
+
+.window {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.right-border {
+  border-radius: 0 20px 20px 0;
+}
+
+.left-border {
+  border-radius: 20px 0 0 20px;
+}
+
 .message-box {
   width: 100%;
   height: 5rem;
@@ -10820,8 +10837,9 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .chat-box {
-  max-height: 80vh;
+  height: 75vh;
   overflow-y: scroll;
+  word-break: break-word;
 }
 
 .text-field {
@@ -10846,5 +10864,25 @@ a.text-dark:hover, a.text-dark:focus {
 
 .circle.active {
   background-color: #068f06;
+}
+
+.you {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.user {
+  font-size: 16px;
+  font-weight: bold;
+  color: blue;
+}
+
+.status {
+  border-radius: 20px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -88,14 +88,12 @@ document.addEventListener("DOMContentLoaded", async () => {
                 image = "active";
               }
               online +=
-                '<a class="d-flex align-items-center" href="#post" onclick="insertLogin(\'' +
+                '<div id="youTarget" class="d-flex align-items-center">';
+              online += '<div class="circle mr-1 ' + image + '"></div>';
+              online +=
+                '<p class="user m-0">' +
                 data["list"][id]["login"] +
-                '\')" title="' +
-                text +
-                '">';
-              online += '<div class="circle mr-1 ' + image + '"></div> ';
-              online += data["list"][id]["login"] + "</a>";
-
+                "</p></div>";
               if (i == 1) {
                 i = 0;
                 online += "<br>";
