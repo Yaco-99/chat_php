@@ -1,2 +1,7 @@
 @import "variable_override";
+@import "kstyles";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+    color:red;
+}
