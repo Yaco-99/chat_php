@@ -5,9 +5,6 @@ $pdo = Database::dbConnect();
 $db = new Database();
 session_start();
 
-$_SESSION['id'] = 1;
-$_SESSION['login'] = "test";
-
 $user = new User();
 $json['error'] = $user->checkUser($pdo, $_SESSION['id'], $_SESSION['login']);
 

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
+  const chatBox = document.getElementById("target");
   await getMessage();
   await getOnline();
 
@@ -8,12 +9,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       xmlhttp.onreadystatechange = async function () {
         if (this.readyState == 4 && this.status == 200) {
+          if (!(chatBox === document.activeElement)) {
+            chatBox.scrollTop = chatBox.scrollHeight;
+          }
           const data = JSON.parse(this.response);
           if (data.error == 0) {
-            document.getElementById("target").innerHTML = data.messages;
+            chatBox.innerHTML = data.messages;
           } else if (data.error == "unlog") {
             alert("You're not logged");
           }
+
           resolve();
         }
       };
@@ -65,7 +70,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       xmlhttp.onreadystatechange = async function () {
         if (this.readyState == 4 && this.status == 200) {
           const data = JSON.parse(this.response);
-          console.log(data);
           if (data.error == "0") {
             let online = "",
               i = 1,
@@ -84,12 +88,12 @@ document.addEventListener("DOMContentLoaded", async () => {
                 image = "active";
               }
               online +=
-                '<a href="#post" onclick="insertLogin(\'' +
+                '<a class="d-flex align-items-center" href="#post" onclick="insertLogin(\'' +
                 data["list"][id]["login"] +
                 '\')" title="' +
                 text +
                 '">';
-              online += '<img src="status-' + image + '.png" /> ';
+              online += '<div class="circle mr-1 ' + image + '"></div> ';
               online += data["list"][id]["login"] + "</a>";
 
               if (i == 1) {
@@ -119,7 +123,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     xmlhttp.onreadystatechange = async function () {
       if (this.readyState == 4 && this.status == 200) {
-        console.log(this.response);
       }
     };
     status.append("status", e.target.value);

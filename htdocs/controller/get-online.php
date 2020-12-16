@@ -16,7 +16,7 @@ if (user_verified()) {
             array(":id", ":ip", ":user", ":status", ":time"),
             array(
                 'id' => '',
-                'ip' => $_SERVER["REMOTE_ADDR"],
+                'ip' => '' /* $_SERVER["REMOTE_ADDR"] */,
                 'user' => $_SESSION['id'],
                 'status' => "2",
                 'time' => time(),

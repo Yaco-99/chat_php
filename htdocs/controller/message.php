@@ -7,11 +7,11 @@ class Messages
         while ($data = $sql->fetch()) {
 
             $text .= '<tr><td style="width:15%" valign="top">';
-            // Si le dernier message est du même membre, on écrit pas de nouveau son pseudo
+
             if ($prev != $data['account_id']) {
                 $text .= '<a href="#post" onclick="insertLogin(\'' . addslashes($data['account_login']) . '\')">';
                 $text .= date('[H:i]', $data['time']);
-                $text .= '&nbsp;<span style="color:' . $color . '">' . $data['account_login'] . '</span>';
+                $text .= '&nbsp;<span>' . $data['account_login'] . '</span>';
                 $text .= '</a>';
             }
             $text .= '</td>';
