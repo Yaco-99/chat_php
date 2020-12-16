@@ -1,6 +1,5 @@
 <?php
     require "../../config/config.php";
-
 ?>
 
 <!DOCTYPE html>
@@ -18,5 +17,5 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1>Hello</h1>
+    <!-- <h1>Hello</h1> -->
     

@@ -6,7 +6,6 @@ html, body {
     top: 0;
     bottom: 0;
     font-family: 'Lato', sans-serif;
-    color: red;
 }
 
 .top-nav {
@@ -25,7 +24,46 @@ html, body {
                 text-decoration: none;
                 font-size: 2rem;
             }
+            a:hover {
+                color: #afafaf;
+                transition: 0.15s ease-in;
+            }
         }
     }
 }
 
+#section {
+    background-image: url('../img/cyberpunk-5774101_1920.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper-landing {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    top: 40%;
+    h1 {
+        font-size: 3rem;
+        color: #ffffff;
+        margin:0;
+        font-weight: 100;
+    }
+    h2 {
+        font-size: 2rem;
+        color: #f2f2f2;
+        opacity: 0.6;
+        margin:0;
+        font-weight: 100;
+    }
+}
+
+// Button LOGIN
+.btn-login {
+    border: 1px solid #ffffff;
+    padding: 6px 20px;
+}

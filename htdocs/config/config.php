@@ -12,7 +12,7 @@ define('DB_NAME', 'my_database'); // add db name
 define('APPROOT', dirname(dirname(__FILE__)));
 
 //URLROOT (Dynamic links)
-define('URLROOT', 'http://localhost/'); // path to url
+define('URLROOT', 'http://localhost/htdocs'); // path to url
 
 //Sitename
 define('SITENAME', 'Chat PHP');

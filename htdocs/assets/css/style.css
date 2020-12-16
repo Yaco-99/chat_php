@@ -1,3 +1,51 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.top-nav {
+  display: block;
+}
+
+.top-nav ul {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 6%;
+  top: 2%;
+}
+
+.top-nav ul li {
+  display: inline-block;
+  margin-left: 28px;
+}
+
+.top-nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.top-nav ul li a:hover {
+  color: #afafaf;
+  -webkit-transition: 0.15s ease-in;
+  transition: 0.15s ease-in;
+}
+
+#section {
+  background-image: url("../img/cyberpunk-5774101_1920.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
