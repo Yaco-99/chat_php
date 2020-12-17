@@ -9,7 +9,7 @@
     <meta htttp-equiv="Cache-control" content="no-cache">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> <?php echo SITENAME; ?>
-    <link rel="stylesheet" href=" <?php URLROOT ?>/htdocs/assets/css/style.css">
+    <link rel="stylesheet" href=" <?php URLROOT ?>/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400;700&display=swap" rel="stylesheet"/>

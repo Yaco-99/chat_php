@@ -3,8 +3,8 @@
 # define = define a case-sensitive ~constant~
 
 // Database parameters
-define('DB_HOST', 'localhost'); // add db host
-define('DB_USer', 'root'); // add db root
+define('DB_HOST', 'mysqldb'); // add db host
+define('DB_USER', 'root'); // add db root
 define('DB_PASS', 'root'); // add db pass
 define('DB_NAME', 'my_database'); // add db name
 
@@ -12,7 +12,7 @@ define('DB_NAME', 'my_database'); // add db name
 define('APPROOT', dirname(dirname(__FILE__)));
 
 //URLROOT (Dynamic links)
-define('URLROOT', 'http://localhost/htdocs'); // path to url
+define('URLROOT', 'http://localhost'); // path to url
 
 //Sitename
 define('SITENAME', 'Chat PHP');
