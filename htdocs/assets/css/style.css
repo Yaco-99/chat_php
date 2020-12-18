@@ -163,6 +163,11 @@ input::placeholder {
   color: #ff0000;
 }
 
+.getRekt {
+  padding-left: 4em;
+  color: red;
+}
+
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
