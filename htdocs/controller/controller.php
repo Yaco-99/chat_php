@@ -1,7 +1,7 @@
 <?php
 
 require __DIR__ . '/../modele/modele.php';
-require __DIR__ . '/../modele/user.php';
+require __DIR__ . '/../modele/userCheck.php';
 require __DIR__ . '/message.php';
 
 class Routes

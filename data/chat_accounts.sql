@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysqldb
--- Generation Time: Dec 15, 2020 at 03:21 PM
+-- Generation Time: Dec 18, 2020 at 11:22 AM
 -- Server version: 5.7.32
 -- PHP Version: 7.2.5
 
@@ -31,15 +31,16 @@ SET time_zone = "+00:00";
 CREATE TABLE `chat_accounts` (
   `account_id` int(11) NOT NULL,
   `account_login` varchar(30) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
-  `account_pass` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL
+  `account_pass` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `account_email` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `chat_accounts`
 --
 
-INSERT INTO `chat_accounts` (`account_id`, `account_login`, `account_pass`) VALUES
-(1, 'test', '123');
+INSERT INTO `chat_accounts` (`account_id`, `account_login`, `account_pass`, `account_email`) VALUES
+(3, 'test', '$2y$10$hEvuGR1J3SaE7OZ.fnsRveFxIWF.usZszXne.aoxY0kbqyVkgY1Sm', 'test@test.test');
 
 --
 -- Indexes for dumped tables
@@ -59,7 +60,7 @@ ALTER TABLE `chat_accounts`
 -- AUTO_INCREMENT for table `chat_accounts`
 --
 ALTER TABLE `chat_accounts`
-  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

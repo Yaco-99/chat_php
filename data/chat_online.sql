@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysqldb
--- Generation Time: Dec 15, 2020 at 03:21 PM
+-- Generation Time: Dec 18, 2020 at 11:23 AM
 -- Server version: 5.7.32
 -- PHP Version: 7.2.5
 
@@ -30,7 +30,6 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `chat_online` (
   `online_id` int(11) NOT NULL,
-  `online_ip` varchar(100) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `online_user` int(11) NOT NULL,
   `online_status` int(11) NOT NULL,
   `online_time` bigint(21) NOT NULL
@@ -54,7 +53,7 @@ ALTER TABLE `chat_online`
 -- AUTO_INCREMENT for table `chat_online`
 --
 ALTER TABLE `chat_online`
-  MODIFY `online_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `online_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

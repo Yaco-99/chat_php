@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysqldb
--- Generation Time: Dec 15, 2020 at 03:22 PM
+-- Generation Time: Dec 18, 2020 at 11:23 AM
 -- Server version: 5.7.32
 -- PHP Version: 7.2.5
 
@@ -49,7 +49,10 @@ INSERT INTO `messages` (`id`, `user_id`, `time`, `text`) VALUES
 (10, 1, 1608033824, 'Moda'),
 (16, 1, 1608034278, 'testee'),
 (17, 1, 1608034381, 'enter'),
-(18, 1, 1608034385, 'click');
+(18, 1, 1608034385, 'click'),
+(19, 1, 1608125210, 'blazoedjzqfoiqzhfiogheghoiqhgiviqohvboighqbvgoizhgvioghzOIGEVHOIZHGVIOJHZOIEGjhzioeHFZQUGIEZIUHZEGFIOZEJFOIPJZEOIFHZEIFAZJEFSPDQVJNOPSJNPOJSOPSJVDPOHIOhoisdjvopqjpovhqopjvopjqjvqopsjvopqsdpivhs'),
+(20, 1, 1608125390, 'bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla'),
+(21, 3, 1608288806, 'hello');
 
 --
 -- Indexes for dumped tables
@@ -69,7 +72,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
