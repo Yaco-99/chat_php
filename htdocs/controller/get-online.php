@@ -1,8 +1,8 @@
 <?php
 require_once 'controller.php';
 
-$pdo = Database::dbConnect();
-$db = new Database();
+$pdo = DatabaseYannick::dbConnect();
+$db = new DatabaseYannick();
 session_start();
 
 $user = new UserCheck();

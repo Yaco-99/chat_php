@@ -15,7 +15,7 @@ require __DIR__ . '/../controller/Users.php';
           <option value="2">En ligne</option>
         </select>
         <form method="POST">
-          <input type="submit" name="logout">
+          <input type="submit" name="logout" value="logout">
         </form>
         <?php if (isset($_POST['logout'])) {
     $user = new Users();

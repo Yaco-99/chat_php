@@ -1,6 +1,6 @@
 <?php
 
-class Database
+class DatabaseYannick
 {
     public static function dbConnect()
     {
