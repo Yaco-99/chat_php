@@ -4,9 +4,7 @@
   <div class="row m-0">
     <div class="col-2 border border-dark offset-1 py-2 window left-border">
       <div class="you border-bottom border-dark" id="you">
-        <div id="youTarget" class="d-flex align-items-center">
-        <div class="circle mr-1 inactive"></div> <p class="user m-0">test</p>
-        </div>
+        <div id="youTarget" class="d-flex align-items-center"></div>
         <select name="status" id="selectStatus" class="status window">
           <option value="0">Absent</option>
           <option value="1">Occupé</option>

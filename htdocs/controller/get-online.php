@@ -16,7 +16,7 @@ if (user_verified()) {
             array(":id", ":ip", ":user", ":status", ":time"),
             array(
                 'id' => '',
-                'ip' => '' /* $_SERVER["REMOTE_ADDR"] */,
+                'ip' => $_SERVER["REMOTE_ADDR"],
                 'user' => $_SESSION['id'],
                 'status' => "2",
                 'time' => time(),
@@ -49,12 +49,14 @@ if ($count != 0) {
 
         $infos["status"] = $status;
         $infos["login"] = $data['account_login'];
+        $infos["id"] = $data['account_id'];
 
         $accounts[$i] = $infos;
         $i++;
     }
 
     $json['list'] = $accounts;
+    $json['session'] = $_SESSION['id'];
 } else {
     $json['error'] = '1';
 }

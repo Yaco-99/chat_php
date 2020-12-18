@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           const data = JSON.parse(this.response);
           if (data.error == "0") {
             let online = "",
+              you = "",
               i = 1,
               image,
               text;
@@ -87,13 +88,17 @@ document.addEventListener("DOMContentLoaded", async () => {
                 text = "En ligne";
                 image = "active";
               }
-              online +=
-                '<div id="youTarget" class="d-flex align-items-center">';
-              online += '<div class="circle mr-1 ' + image + '"></div>';
-              online +=
-                '<p class="user m-0">' +
+              const pattern =
+                '<div id="youTarget" class="d-flex align-items-center"><div class="circle mr-1 ' +
+                image +
+                '"></div><p class="user m-0">' +
                 data["list"][id]["login"] +
                 "</p></div>";
+
+              data["list"][id]["id"] == data["session"]
+                ? (you = pattern) && (online += pattern)
+                : (online += pattern);
+
               if (i == 1) {
                 i = 0;
                 online += "<br>";
@@ -101,6 +106,7 @@ document.addEventListener("DOMContentLoaded", async () => {
               i++;
             }
             document.getElementById("users").innerHTML = online;
+            document.getElementById("youTarget").innerHTML = you;
           } else if (data.error == "1") {
             document.getElementById("users").innerHTML =
               "Aucun utilisateur connecté";
@@ -129,5 +135,5 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   setInterval(getMessage, 300);
-  setInterval(getOnline, 5000);
+  setInterval(getOnline, 300);
 });
