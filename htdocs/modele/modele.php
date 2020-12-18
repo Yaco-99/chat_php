@@ -4,7 +4,7 @@ class DatabaseYannick
 {
     public static function dbConnect()
     {
-        $pdo = new PDO('mysql:host=mysqldb;dbname=my_database', 'root', 'root');
+        $pdo = new PDO('mysql:host=sql7.freemysqlhosting.net;dbname=sql7382863', 'sql7382863', 'mrn39KIPpx');
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
         return $pdo;
