@@ -5,7 +5,7 @@ $pdo = Database::dbConnect();
 $db = new Database();
 session_start();
 
-$user = new User();
+$user = new UserCheck();
 $data = $user->checkOnline($pdo, $_SESSION['id']);
 
 if (user_verified()) {

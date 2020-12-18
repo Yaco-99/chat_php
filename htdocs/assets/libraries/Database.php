@@ -57,11 +57,11 @@ class Database
         return $sqlRequest;
     }
 
-    public function insertToOnline($data)
+    public function insertToOnline($user_id)
     {
         $query = $this->dbHandler->prepare('INSERT INTO chat_online(online_user, online_status, online_time) VALUES(:online_user, :online_status, :online_time)');
         $query->execute(array(
-            ":online_user" => $data["username"],
+            ":online_user" => $user_id,
             ":online_status" => 2,
             ":online_time" => time(),
         ));

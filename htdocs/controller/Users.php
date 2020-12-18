@@ -99,7 +99,6 @@ class Users extends Controller
 
     public function login($data, $session)
     {
-        var_dump($session);
         if (isset($session["loggedin"]) && $session['loggedin']) {
             exit;
         }
@@ -125,13 +124,13 @@ class Users extends Controller
             if ($stmt['execute']) {
                 if ($row = $stmt['fetch']) {
                     $id = $row['account_id'];
-                    $username = $row['account_username'];
+                    $username = $row['account_login'];
                     $hashed_password = $row['account_pass'];
                     if (password_verify($password, $hashed_password)) {
                         $_SESSION["loggedin"] = true;
                         $_SESSION["id"] = $id;
                         $_SESSION["login"] = $username;
-                        $this->userModel->connectToChat($data);
+                        $this->userModel->connectToChat($_SESSION["id"]);
                     } else {
                         $password_err = "Incorrect password";
                     }

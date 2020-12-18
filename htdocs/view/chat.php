@@ -1,4 +1,6 @@
-<?php ob_start();
+<?php
+session_start();
+ob_start();
 require __DIR__ . '/../controller/Users.php';
 ?>
 
@@ -12,8 +14,8 @@ require __DIR__ . '/../controller/Users.php';
           <option value="1">Occupé</option>
           <option value="2">En ligne</option>
         </select>
-        <form action="$_POST">
-          <input type="button">
+        <form method="POST">
+          <input type="submit" name="logout">
         </form>
         <?php if (isset($_POST['logout'])) {
     $user = new Users();

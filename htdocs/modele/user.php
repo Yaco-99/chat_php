@@ -1,5 +1,5 @@
 <?php
-class User
+class UserCheck
 {
     public function checkUser($pdo, $id, $login)
     {

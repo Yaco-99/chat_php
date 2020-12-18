@@ -31,9 +31,9 @@ class User
         return;
     }
 
-    public function connectToChat($data)
+    public function connectToChat($user_id)
     {
-        $this->db->insertToOnline($data);
+        $this->db->insertToOnline($user_id);
     }
 
     // Find user by email. Email is passed in by the Controller.

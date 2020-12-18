@@ -38,7 +38,6 @@ require APPROOT . '/view/includes/navigation.php';
 if (isset($_POST['submit'])) {
     $log = new Users();
     $log->login($_POST, $_SESSION);
-    var_dump($_SESSION['id']);
 }
 ?>
     </div>
