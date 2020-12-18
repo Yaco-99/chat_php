@@ -1,7 +1,5 @@
 <?php
 session_start();
-$_SESSION['id'] = 1;
-$_SESSION['login'] = "test";
 ?>
 <!DOCTYPE html>
 <html lang="en">

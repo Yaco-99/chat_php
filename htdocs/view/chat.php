@@ -1,4 +1,6 @@
-<?php ob_start();?>
+<?php ob_start();
+require __DIR__ . '/../controller/Users.php';
+?>
 
 <div class="container-fluid mt-5">
   <div class="row m-0">
@@ -10,6 +12,13 @@
           <option value="1">Occupé</option>
           <option value="2">En ligne</option>
         </select>
+        <form action="$_POST">
+          <input type="button">
+        </form>
+        <?php if (isset($_POST['logout'])) {
+    $user = new Users();
+    $user->logout($_SESSION);
+}?>
       </div>
       <div id="users"></div>
     </div>

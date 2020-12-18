@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           if (data.error == 0) {
             chatBox.innerHTML = data.messages;
           } else if (data.error == "unlog") {
-            alert("You're not logged");
+            console.log("You're not logged");
           }
 
           resolve();

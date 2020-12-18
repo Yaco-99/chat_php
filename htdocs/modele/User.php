@@ -17,6 +17,25 @@ class User
 
     }
 
+    public function login($sql, $data)
+    {
+        return $this->db->login($sql, $data);
+    }
+
+    public function logout($session)
+    {
+        $this->db->deleteToOnline($session['id']);
+        $_SESSION['logged'] = false;
+        $_SESSION = array();
+        session_destroy();
+        return;
+    }
+
+    public function connectToChat($data)
+    {
+        $this->db->insertToOnline($data);
+    }
+
     // Find user by email. Email is passed in by the Controller.
     public function findUserByEmail($email)
     {

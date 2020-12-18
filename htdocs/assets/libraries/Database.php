@@ -46,8 +46,40 @@ class Database
         ));
         return;
     }
-    //SELECT * FROM users WHERE email = :email
 
+    public function login($sql, $data)
+    {
+        $stmt = $this->dbHandler->prepare($sql);
+        $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
+        $param_username = trim($data["username"]);
+        $sqlRequest['execute'] = $stmt->execute();
+        $sqlRequest['fetch'] = $stmt->fetch();
+        return $sqlRequest;
+    }
+
+    public function insertToOnline($data)
+    {
+        $query = $this->dbHandler->prepare('INSERT INTO chat_online(online_user, online_status, online_time) VALUES(:online_user, :online_status, :online_time)');
+        $query->execute(array(
+            ":online_user" => $data["username"],
+            ":online_status" => 2,
+            ":online_time" => time(),
+        ));
+        return;
+    }
+
+    public function deleteToOnline($id)
+    {
+        $query = $this->dbHandler->prepare('DELETE FROM chat_online WHERE online_user = :online_user');
+        $query->execute(array(
+            ":online_user" => $id,
+        ));
+        return;
+    }
+/*
+online_user
+online_status
+online_time */
     public function findEmail($sql, $email)
     {
         $query = $this->dbHandler->prepare($sql);
